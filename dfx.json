@@ -1,0 +1,31 @@
+{
+  "canisters": {
+    "campusride_backend": {
+      "build": "python -m kybra campusride_backend src/campusride_backend/src/main.py src/campusride_backend/campusride_backend.did",
+      "candid": "src/campusride_backend/campusride_backend.did",
+      "gzip": true,
+      "post_install": ".kybra/campusride_backend/post_install.sh",
+      "type": "custom",
+      "wasm": ".kybra/campusride_backend/campusride_backend.wasm"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
